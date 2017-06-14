@@ -81,7 +81,7 @@
     hasRowConflictAt: function(rowIndex) {
       var counter = 0;
       var row = this.get(rowIndex);
-      var result = row.reduce(function(acc, entry){
+      var result = row.reduce(function(acc, entry) {
         return acc + entry;
       });
       return result > 1;
@@ -97,7 +97,7 @@
       }
       return false;
 
-     /////////////////////////////////////////RETURN TO IMPLEMENT REDUCE////////////////////////////////////////
+     /////////////////////////////////////////RETURN TO IMPLEMENT REDUCE / CLOSURE VARIABLE ///////////////////////////////////
 
      //  var checkRowForConflict = function(acc, entry) {
      //    return (acc || this.hasRowConflictAt.bind(this, entry));
