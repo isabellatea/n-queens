@@ -135,3 +135,15 @@ window.countNQueensSolutions = function(n) {
   return solutionCount;
 };
 
+
+
+
+
+
+//Time Complexity
+//findNRooksSolution: O(n!)
+//countNRooksSolutions: O(n!)
+//findNQueensSolution: O(n!)
+//countNQueensSolutions: O(n!)
+
+
