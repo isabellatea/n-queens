@@ -62,6 +62,8 @@
     },
 
 
+
+
 /*
          _             _     _
      ___| |_ __ _ _ __| |_  | |__   ___ _ __ ___ _
@@ -221,3 +223,16 @@
   };
 
 }());
+
+
+
+
+//Time Complexity//
+//hasRowConflictAt: O(n)
+//hasAnyRowConflicts: O(n^2)
+//hasColConflictAt: O(n)
+//hasAnyColConflicts: O(n^2)
+//hasMajorDiagonalConflictAt: O(n)
+//hasAnyMajorDiagonalConflicts: O(n^2)
+//hasMinorDiagonalConflictAt: O(n)
+//hasAnyMinorDiagonalConflicts: O(n^2)
