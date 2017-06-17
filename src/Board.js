@@ -137,19 +137,14 @@
 
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      var size = this.get('n')
+      var size = this.get('n');
       var counter = 0;
       var column = majorDiagonalColumnIndexAtFirstRow;
 
       for (var row = 0; row < size; row++, column++) {
-        console.log(size);
-        console.log("Row Value:" + row + ", Column Value:" + column)
-        console.log('value at row/index: ', this.rows()[row][column]);
-        console.log(JSON.stringify(this.rows()[0]), '\n', JSON.stringify(this.rows()[1]), '\n', JSON.stringify(this.rows()[2]), '\n', JSON.stringify(this.rows()[3]));
         if (this._isInBounds(row, column)) {
-            console.log('in bounds!');
-            var currentRow = this.get(row);
-              counter += currentRow[column];
+          var currentRow = this.get(row);
+          counter += currentRow[column];
         }
       }
       return counter > 1;
@@ -158,7 +153,7 @@
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
       var size = this.get('n');
-      for (var i = 1-size; i < size; i++) {
+      for (var i = 1 - size; i < size; i++) {
         if (this.hasMajorDiagonalConflictAt(i)) {
           return true;
         }
@@ -179,14 +174,14 @@
     // --------------------------------------------------------------
     // test if a specific minor diagonal on this board contains a conflict
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
-      var size = this.get('n')
+      var size = this.get('n');
       var counter = 0;
       var column = minorDiagonalColumnIndexAtFirstRow;
 
       for (var row = 0; row < size; row++, column--) {
         if (this._isInBounds(row, column)) {
-            var currentRow = this.get(row);
-              counter += currentRow[column];
+          var currentRow = this.get(row);
+          counter += currentRow[column];
         }
       }
       return counter > 1;
